@@ -1,0 +1,445 @@
+@prefix : <http://www.semanticweb.org/raf/ontologies/2023/3/enologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/raf/ontologies/2023/3/enologia#> .
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia> rdf:type owl:Ontology ;
+                                                             rdfs:comment "Ontología de Rafael Munyoz Patinyo" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#growingAs
+:growingAs rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
+           rdfs:domain :Grape ;
+           rdfs:range :Vineyard ;
+           rdfs:comment "Indicates in which type of Vineyard the grape has been grown" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#madeWith
+:madeWith rdf:type owl:ObjectProperty ,
+                   owl:AsymmetricProperty ;
+          rdfs:domain :Wine ;
+          rdfs:range :Grape ;
+          rdfs:comment "Indicates which grape is used to make the wine"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#anyo
+:anyo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Wine ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Year in which the wine was made"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#body
+:body rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Wine ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Body score, defined as the richness and weight of the wine in your mouth [from 1-5]"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#descripcion
+:descripcion rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Wine ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Small text about the wine"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#isOld
+:isOld rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Wine ;
+       rdfs:range xsd:boolean ;
+       rdfs:comment "Says if the wine is considered old"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#nombre
+:nombre rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Wine ;
+        rdfs:range xsd:string ;
+        rdfs:comment "name of the wine"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Cabernet_Franc
+:Cabernet_Franc rdf:type owl:Class ;
+                rdfs:subClassOf :Rose ;
+                rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Chardonnay
+:Chardonnay rdf:type owl:Class ;
+            rdfs:subClassOf :White ;
+            rdfs:comment "Wine named by its maion grape"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Enologia
+:Enologia rdf:type owl:Class ;
+          rdfs:comment "Science that studies the production of Wine"@en ;
+          rdfs:label "Enologia" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#European_Vineyard
+:European_Vineyard rdf:type owl:Class ;
+                   rdfs:subClassOf :Vineyard ;
+                   rdfs:comment "Reference to the european Vineyards" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Fortified
+:Fortified rdf:type owl:Class ;
+           rdfs:subClassOf :Wine ;
+           rdfs:comment "Wine with a high alcohol content"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Grape
+:Grape rdf:type owl:Class ;
+       rdfs:subClassOf :Enologia ;
+       rdfs:comment "Fruit that is has to make wine"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Grenache
+:Grenache rdf:type owl:Class ;
+          rdfs:subClassOf :Red ;
+          rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Laus_Rosado
+:Laus_Rosado rdf:type owl:Class ;
+             rdfs:subClassOf :Rose ;
+             rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Merlot
+:Merlot rdf:type owl:Class ;
+        rdfs:subClassOf :Rose ;
+        rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Red
+:Red rdf:type owl:Class ;
+     rdfs:subClassOf :Wine ;
+     rdfs:comment "Wine that uses mostly red grapes" ;
+     rdfs:sameAs "https://dbpedia.org/page/Red_wine" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Red_Grape
+:Red_Grape rdf:type owl:Class ;
+           rdfs:subClassOf :Grape ;
+           owl:disjointWith :White_Grape ;
+           rdfs:comment "Variety of grape defined by its color"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Ribera_del_duero_Red
+:Ribera_del_duero_Red rdf:type owl:Class ;
+                      rdfs:subClassOf :Red ;
+                      rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Rioja_Red
+:Rioja_Red rdf:type owl:Class ;
+           rdfs:subClassOf :Red ;
+           rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Rose
+:Rose rdf:type owl:Class ;
+      rdfs:subClassOf :Wine ;
+      rdfs:comment "Type of wine that can be made of multiple ways." ;
+      rdfs:sameAs "https://dbpedia.org/page/Rosé" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Sauvignon_blanc
+:Sauvignon_blanc rdf:type owl:Class ;
+                 rdfs:subClassOf :White ;
+                 rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Spanish_Vineyard
+:Spanish_Vineyard rdf:type owl:Class ;
+                  rdfs:subClassOf :European_Vineyard ;
+                  rdfs:comment "Reference to the Spanish Vineyards" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Verdejo
+:Verdejo rdf:type owl:Class ;
+         rdfs:subClassOf :White ;
+         rdfs:comment "Wine named by its main grape"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Vicente_Gandia_Rosado
+:Vicente_Gandia_Rosado rdf:type owl:Class ;
+                       rdfs:subClassOf :Rose ;
+                       rdfs:comment "Wine named by its origin region"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Vineyard
+:Vineyard rdf:type owl:Class ;
+          rdfs:subClassOf :Enologia ;
+          rdfs:comment "Place where the grapes al cultivated and the wine produced"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Viura
+:Viura rdf:type owl:Class ;
+       rdfs:subClassOf :White ;
+       rdfs:comment "Wine named by its maion grape"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#White
+:White rdf:type owl:Class ;
+       rdfs:subClassOf :Wine ;
+       rdfs:comment "Obtained from pressed grapes"@en ;
+       rdfs:sameAs "https://dbpedia.org/page/White_wine" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#White_Grape
+:White_Grape rdf:type owl:Class ;
+             rdfs:subClassOf :Grape ;
+             rdfs:comment "Variety of grape defined by its color"@en .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf :Enologia ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :nombre ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :anyo ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:integer
+                      ] ;
+      rdfs:comment "Alcoholic brew" ;
+      rdfs:sameAs "https://dbpedia.org/page/Wine" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Clarete
+:Clarete rdf:type owl:NamedIndividual ,
+                  :Rose ;
+         :anyo 2021 ;
+         :body 2 ;
+         :descripcion "Wine made in Spain" ;
+         :nombre "Clarete" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Penyafiel
+:Penyafiel rdf:type owl:NamedIndividual ,
+                    :Ribera_del_duero_Red ;
+           :madeWith :Tinta_del_Pais ;
+           :anyo 2021 ;
+           :body 2 ;
+           :isOld "false"^^xsd:boolean ;
+           :nombre "Peñafiel" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Polverete
+:Polverete rdf:type owl:NamedIndividual ,
+                    :Chardonnay ;
+           :anyo 2022 ;
+           :body 1 ;
+           :nombre "Polverete" .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Ribera_del_duero
+:Ribera_del_duero rdf:type owl:NamedIndividual ,
+                           :Spanish_Vineyard .
+
+
+###  http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Tinta_del_Pais
+:Tinta_del_Pais rdf:type owl:NamedIndividual ,
+                         :Red_Grape ;
+                :growingAs :Ribera_del_duero .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Red
+                :Rose
+                :White
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia/f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia/old> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia/any> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/raf/ontologies/2023/3/enologia/b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "ComprobarEsViejo" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :anyo ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/any>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/any> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 1980 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOld ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "ViejoConBuenCuerpo" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOld ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/old>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :body ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/b>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/old> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "true"^^xsd:boolean ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/b> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 4 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :body ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 4
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "GenerosoEsTinto" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Fortified ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOld ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/f> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/old>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/old> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first "true"^^xsd:boolean ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Red ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/raf/ontologies/2023/3/enologia/f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

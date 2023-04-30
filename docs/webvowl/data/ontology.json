@@ -1,0 +1,833 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/raf/ontologies/2023/3/enologia" ],
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "comments" : {
+      "undefined" : "Ontología de Rafael Munyoz Patinyo"
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Verdejo",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Verdejo"
+    },
+    "comment" : {
+      "en" : "Wine named by its main grape"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Rioja_Red",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rioja_Red"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "5",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#European_Vineyard",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "European_Vineyard"
+    },
+    "subClasses" : [ "8" ],
+    "comment" : {
+      "undefined" : "Reference to the european Vineyards"
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Vineyard",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vineyard"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "en" : "Place where the grapes al cultivated and the wine produced"
+    },
+    "id" : "7",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Red_Grape",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Red_Grape"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Tinta_del_Pais",
+      "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+      "labels" : {
+        "IRI-based" : "Tinta_del_Pais"
+      }
+    } ],
+    "comment" : {
+      "en" : "Variety of grape defined by its color"
+    },
+    "id" : "24",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Wine",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Wine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Wine"
+    },
+    "subClasses" : [ "22", "17", "2", "4" ],
+    "comment" : {
+      "undefined" : "Alcoholic brew"
+    },
+    "id" : "10",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Cabernet_Franc",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cabernet_Franc"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "31",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Red",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Red_wine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Red"
+    },
+    "subClasses" : [ "1", "5", "41" ],
+    "comment" : {
+      "undefined" : "Wine that uses mostly red grapes"
+    },
+    "id" : "2",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Enologia",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Enologia",
+      "undefined" : "Enologia"
+    },
+    "subClasses" : [ "7", "10", "25" ],
+    "comment" : {
+      "en" : "Science that studies the production of Wine"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Chardonnay",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Chardonnay"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Polverete",
+      "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+      "labels" : {
+        "IRI-based" : "Polverete"
+      }
+    } ],
+    "comment" : {
+      "en" : "Wine named by its maion grape"
+    },
+    "id" : "46",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Merlot",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Merlot"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "29",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Laus_Rosado",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Laus_Rosado"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "16",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Fortified",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fortified"
+    },
+    "comment" : {
+      "en" : "Wine with a high alcohol content"
+    },
+    "id" : "22",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Sauvignon_blanc",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sauvignon_blanc"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "40",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Ribera_del_duero_Red",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ribera_del_duero_Red"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Penyafiel",
+      "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+      "labels" : {
+        "IRI-based" : "Penyafiel"
+      }
+    } ],
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#White",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/White_wine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "White"
+    },
+    "subClasses" : [ "46", "40", "38", "3" ],
+    "comment" : {
+      "en" : "Obtained from pressed grapes"
+    },
+    "id" : "4",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Grape",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Grape"
+    },
+    "subClasses" : [ "27", "24" ],
+    "comment" : {
+      "en" : "Fruit that is has to make wine"
+    },
+    "id" : "25",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Rose",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Rosé",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Rose"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Clarete",
+      "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+      "labels" : {
+        "IRI-based" : "Clarete"
+      }
+    } ],
+    "subClasses" : [ "31", "29", "19", "16" ],
+    "comment" : {
+      "undefined" : "Type of wine that can be made of multiple ways."
+    },
+    "id" : "17",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Spanish_Vineyard",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Spanish_Vineyard"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Ribera_del_duero",
+      "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+      "labels" : {
+        "IRI-based" : "Ribera_del_duero"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Reference to the Spanish Vineyards"
+    },
+    "id" : "8",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Viura",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Viura"
+    },
+    "comment" : {
+      "en" : "Wine named by its maion grape"
+    },
+    "id" : "38",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Grenache",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Grenache"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "41",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#Vicente_Gandia_Rosado",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vicente_Gandia_Rosado"
+    },
+    "comment" : {
+      "en" : "Wine named by its origin region"
+    },
+    "id" : "19",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#White_Grape",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "White_Grape"
+    },
+    "comment" : {
+      "en" : "Variety of grape defined by its color"
+    },
+    "id" : "27",
+    "superClasses" : [ "25" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "52",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "58",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "10",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#body",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "body"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Body score, defined as the richness and weight of the wine in your mouth [from 1-5]"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "range" : "10",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "17",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "17",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "10",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "10",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "25",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "25",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "17",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "17",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#nombre",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "nombre"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "name of the wine"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#descripcion",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "descripcion"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Small text about the wine"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#madeWith",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "madeWith"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Indicates which grape is used to make the wine"
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "36"
+  }, {
+    "range" : "4",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "4",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "13",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "4",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "13",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "13",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "4",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "27",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#nombre",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "nombre"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "name of the wine"
+    },
+    "attributes" : [ "someValues", "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#isOld",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "isOld"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Says if the wine is considered old"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "range" : "17",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "4",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#growingAs",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "growingAs"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Indicates in which type of Vineyard the grape has been grown"
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia#anyo",
+    "baseIri" : "http://www.semanticweb.org/raf/ontologies/2023/3/enologia",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "anyo"
+    },
+    "minCardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Year in which the wine was made"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "range" : "2",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  } ]
+}
